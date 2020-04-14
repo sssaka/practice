@@ -1,3 +1,0 @@
-# practicedayo
-preacticedayo
-
