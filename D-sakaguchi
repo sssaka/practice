@@ -1,0 +1,22 @@
+n=int(input())
+a=[]
+for i in range(n):
+  a+=[int(input())]
+a+=[0,n+1]
+a.sort()
+y=0
+z=0
+for i in range(n+1):
+  x=a[i+1]-a[i]
+  if x==2:
+    y=a[i]+1
+  elif x==0:
+    z=a[i]
+  else:
+    None
+if z==0:
+  print("Correct")
+else:
+  print(str(z)+" "+str(y))
+
+    
