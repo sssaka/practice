@@ -1,0 +1,19 @@
+x=input()
+y=x.upper()
+a=0
+b=[]
+for i in range(len(x)):
+  if x[i]==y[i]:
+    a+=1
+    if a%2==0:
+      t=i
+      b+=[x[s:t+1].lower()]
+    else:
+      s=i
+  else:
+    None
+c=sorted(b)
+d=""
+for str in c:
+  d=d+str[0].upper()+str[1:-1]+str[-1].upper()
+print(d)
