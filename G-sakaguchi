@@ -1,0 +1,40 @@
+n=int(input())
+happy=[]
+for i in range(n-1):
+  z=[]
+  y=input().split(" ")
+  for j in range(n-1-i):
+    z+=[int(y[j])]
+  happyi=[0]*(i+1)+z
+  happy+=[happyi]
+happy+=[[0]*n]
+data=[]
+for i in range(2*3**(n-2)):
+  x=i
+  a=[0]
+  b=[]
+  c=[]
+  for j in range(n-1):
+    t=x%3
+    x=x//3
+    if t==0:
+      a+=[n-1-j]
+    elif t==1:
+      b+=[n-1-j]
+    else:
+      c+=[n-1-j]
+  h=0
+  for u in a:
+    for v in a:
+      h+=happy[u][v]
+  for u in b:
+    for v in b:
+      h+=happy[u][v]
+  for u in c:
+    for v in c:
+      h+=happy[u][v]
+  data+=[h]
+print(max(data))
+    
+
+      
